@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Fernleaf Garden Supply – Blinking banner (inaccessible)</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- INACCESSIBLE: blinking text inside an assertive live region.
+       js/blink.js re-inserts the text every blink, so screen readers
+       re-announce it and interrupt the user each time. -->
+  <div class="promo" role="alert" aria-live="assertive">
+    <p class="promo-text" id="promo-text">Sale ends soon!</p>
+    <a class="promo-link" href="#main">Shop the sale</a>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#">Fernleaf Garden Supply</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#main">Shop plants</a></li>
+          <li><a href="#main">Plant care</a></li>
+          <li><a href="#main">Visit us</a></li>
+          <li><a href="#main">Cart (0)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="intro">
+      <h1>Houseplants that forgive a missed watering</h1>
+      <p>Hardy, low-light favorites grown in our greenhouse and shipped in recycled pots.</p>
+    </section>
+
+    <section aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured plants</h2>
+      <ul class="products">
+        <li class="product">
+          <h3>Snake plant</h3>
+          <p>Thrives on neglect and low light.</p>
+          <p class="price">$24</p>
+          <button class="btn" type="button">Add snake plant to cart</button>
+        </li>
+        <li class="product">
+          <h3>ZZ plant</h3>
+          <p>Glossy leaves, needs water every few weeks.</p>
+          <p class="price">$32</p>
+          <button class="btn" type="button">Add ZZ plant to cart</button>
+        </li>
+        <li class="product">
+          <h3>Golden pothos</h3>
+          <p>Trailing vines for shelves and hanging baskets.</p>
+          <p class="price">$18</p>
+          <button class="btn" type="button">Add golden pothos to cart</button>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="fixed.html">View the fixed version</a></p>
+  </footer>
+
+  <script src="js/blink.js"></script>
+</body>
+</html>

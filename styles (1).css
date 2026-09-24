@@ -1,0 +1,187 @@
+/* Fernleaf Garden Supply — shared demo styles */
+:root {
+  --forest: #1f4d3a;
+  --leaf: #3e7c59;
+  --sage: #eef3ee;
+  --paper: #ffffff;
+  --marigold: #f2b632;
+  --ink: #17231d;
+  --muted: #4a5a51;
+  --focus: #0b57d0;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 100%; }
+
+body {
+  margin: 0;
+  font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--sage);
+}
+
+h1, h2, h3, .logo {
+  font-family: "Bricolage Grotesque", "Atkinson Hyperlegible", system-ui, sans-serif;
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+
+a { color: var(--forest); }
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  background: var(--paper);
+  padding: 0.5rem 1rem;
+  z-index: 10;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ---------- Promo banner ---------- */
+.promo {
+  background: var(--marigold);
+  color: var(--ink);
+  text-align: center;
+  padding: 0.85rem 1rem;
+  min-height: 3.4rem; /* keeps layout steady while the broken version blinks */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.promo-text {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.promo-link {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* Used only by the broken demo to hide the text on each blink */
+.promo-text.is-hidden { visibility: hidden; }
+
+/* ---------- Header ---------- */
+.site-header {
+  background: var(--forest);
+  color: var(--paper);
+}
+
+.header-inner {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: var(--paper);
+  text-decoration: none;
+  font-weight: 700;
+}
+.site-nav a:hover { text-decoration: underline; }
+
+/* ---------- Main ---------- */
+main {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.intro {
+  max-width: 38rem;
+  margin-bottom: 3rem;
+}
+
+.intro h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 800;
+  color: var(--forest);
+}
+
+.intro p {
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product {
+  background: var(--paper);
+  padding: 1.5rem;
+  border-left: 6px solid var(--leaf);
+}
+
+.product h3 { font-size: 1.3rem; }
+
+.product p { margin: 0 0 1rem; color: var(--muted); }
+
+.price {
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 1.15rem;
+}
+
+.btn {
+  font: inherit;
+  font-weight: 700;
+  background: var(--forest);
+  color: var(--paper);
+  border: 0;
+  padding: 0.65rem 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.btn:hover { background: var(--leaf); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid #c9d6cc;
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
