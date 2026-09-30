@@ -69,9 +69,6 @@ a { color: var(--forest); }
 
 .blink {
   text-decoration: blink; 
-  margin: 0;
-  font-weight: 700;
-  font-size: 1.2rem;
 } 
 
 .promo-link {
