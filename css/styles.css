@@ -67,7 +67,7 @@ a { color: var(--forest); }
   font-size: 1.2rem;
 }
 
-.promo-line {
+.blink {
   text-decoration: blink; 
   margin: 0;
   font-weight: 700;
